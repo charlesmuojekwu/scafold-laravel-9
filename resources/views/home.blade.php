@@ -16,6 +16,21 @@
 
                     {{ __('You are logged in!') }}
                 </div>
+                <div class="card-body">
+
+                    <x-alert>
+                        <x-slot:title>
+                            Upload Notification
+                        </x-slot>
+                        <p>Respone from image upload</p>
+                    </x-alert>
+                 
+                   <form action="/upload" method="POST" enctype="multipart/form-data">
+                    @csrf
+                        <input type="file" name="image">
+                        <input type="submit" value="Upload">
+                   </form>
+                </div>
             </div>
         </div>
     </div>

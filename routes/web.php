@@ -22,6 +22,7 @@ Route::get('/', function () {
 
 
 Route::get('/user', [UserController::class, 'index']);
+Route::post('/upload', [UserController::class, 'fileUpload']);
 
 Auth::routes();
 
